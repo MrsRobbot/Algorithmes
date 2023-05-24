@@ -13,12 +13,12 @@ Les tableaux, également connus sous le nom d'arrays, sont des structures de don
 1. Manipulation : La manipulation d'un tableau fait référence aux opérations permettant d'accéder aux éléments du tableau, de les modifier ou de les traiter d'une manière spécifique. Cela inclut l'accès à un élément par son index, la modification de la valeur d'un élément existant, l'ajout d'éléments supplémentaires ou la suppression d'éléments.
 
    <img src="Manipulation-Pseudo-code.png" alt="Manipulation-Pseudo-code">
-   <img src="Manipulation - Javascript.png" alt="Manipulation-Pseudo-code">
+   <img src="Manipulation - Javascript.png" alt="Manipulation-Javascript">
 
 
-2. Recherche :
-   - Recherche séquentielle : Pour rechercher un élément spécifique dans un tableau, vous pouvez parcourir les éléments un par un jusqu'à ce que vous trouviez une correspondance. Cela implique de comparer chaque élément avec la valeur recherchée.
-   - Recherche binaire (uniquement pour les tableaux triés) : Si le tableau est trié, vous pouvez utiliser la recherche binaire, qui divise le tableau en deux à chaque itération pour rechercher plus efficacement l'élément cible. Cette méthode est plus rapide que la recherche séquentielle pour les tableaux de grande taille.
+2. Recherche : La recherche dans un tableau consiste à trouver un élément spécifique à l'aide d'une valeur donnée. Cela peut être réalisé en parcourant le tableau et en comparant chaque élément avec la valeur recherchée. Si une correspondance est trouvée, l'indice de l'élément peut être retourné ou une indication peut être donnée sur sa présence dans le tableau.
+<img src="Recherche-Pseudo-code.png" alt="Recherche-Pseudo-code">
+<img src="Recherche-Javascript.png" alt="Recherche-Javascript">
 
 3. Insertion :
    - Ajout en fin de tableau : Vous pouvez ajouter un nouvel élément à la fin du tableau en utilisant l'indice suivant la dernière position occupée. Par exemple, `tableau[longueur] = nouvelElement` ajoute `nouvelElement` à la fin du tableau.
