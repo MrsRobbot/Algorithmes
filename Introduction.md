@@ -1,4 +1,10 @@
+## **Introduction aux algorithmes**
+
+ **- Qu'est-ce qu'un algorithme ?**
+
 Un algorithme est une séquence d'instructions ou de règles bien définies et ordonnées, utilisées pour résoudre un problème ou effectuer une tâche spécifique. Il s'agit d'une procédure systématique qui guide les étapes nécessaires pour atteindre un résultat ou résoudre un problème donné.
+
+**- Rôle des algorithmes en informatique.**
 
 En informatique, les algorithmes jouent un rôle crucial. Voici quelques-uns de leurs rôles principaux :
 
@@ -9,6 +15,8 @@ En informatique, les algorithmes jouent un rôle crucial. Voici quelques-uns de 
 3. Prise de décision : Les algorithmes peuvent être utilisés pour automatiser la prise de décision en fonction de critères spécifiques. Par exemple, les algorithmes de recommandation utilisés par les plateformes en ligne pour suggérer des produits ou du contenu aux utilisateurs.
 
 4. Optimisation : Les algorithmes sont utilisés pour optimiser des processus et des systèmes, en cherchant à trouver la meilleure solution possible en termes de temps, d'espace ou d'autres contraintes spécifiques.
+
+**- Complexité algorithmique : temps et espace.**
 
 La complexité algorithmique est une mesure de la quantité de ressources (temps et espace) requises par un algorithme pour résoudre un problème en fonction de la taille de l'entrée. La complexité temporelle mesure le temps d'exécution de l'algorithme, tandis que la complexité spatiale mesure l'espace mémoire nécessaire à l'exécution de l'algorithme.
 
