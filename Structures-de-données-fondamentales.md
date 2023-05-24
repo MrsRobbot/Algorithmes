@@ -10,9 +10,11 @@ Les structures de données peuvent varier en fonction de la complexité et de l'
 
 Les tableaux, également connus sous le nom d'arrays, sont des structures de données linéaires qui permettent de stocker une collection d'éléments de même type. Voici comment effectuer différentes opérations sur les tableaux :
 
-1. Manipulation :
-   - Accès à un élément : Vous pouvez accéder à un élément spécifique dans un tableau en utilisant son index. Par exemple, `tableau[2]` retournera l'élément à l'indice 2 du tableau.
-   - Modification d'un élément : Vous pouvez modifier la valeur d'un élément en lui assignant une nouvelle valeur. Par exemple, `tableau[1] = 10` modifiera la valeur de l'élément à l'indice 1 pour être égale à 10.
+1. Manipulation : La manipulation d'un tableau fait référence aux opérations permettant d'accéder aux éléments du tableau, de les modifier ou de les traiter d'une manière spécifique. Cela inclut l'accès à un élément par son index, la modification de la valeur d'un élément existant, l'ajout d'éléments supplémentaires ou la suppression d'éléments.
+
+   <img src="Manipulation-Pseudo-code.png" alt="Manipulation-Pseudo-code">
+   <img src="Manipulation - Javascript.png" alt="Manipulation-Pseudo-code">
+
 
 2. Recherche :
    - Recherche séquentielle : Pour rechercher un élément spécifique dans un tableau, vous pouvez parcourir les éléments un par un jusqu'à ce que vous trouviez une correspondance. Cela implique de comparer chaque élément avec la valeur recherchée.
