@@ -1,12 +1,12 @@
 
 <h1>SOMMAIRE</h1>
 
-1. [Introduction aux algorithmes](Introduction.md):
+[1. Introduction aux algorithmes :](Introduction.md)
    - Qu'est-ce qu'un algorithme ?
    - Rôle des algorithmes en informatique.
    - Complexité algorithmique : temps et espace.
 
-2. Structures de données fondamentales :
+[2. Structures de données fondamentales :](Structures-de-données-fondamentales.md)
    - Tableaux (arrays) : manipulation, recherche, insertion, suppression.
    - Listes chaînées : concepts de base, opérations, avantages et inconvénients.
    - Piles (stacks) : principes, opérations (push, pop), applications.
