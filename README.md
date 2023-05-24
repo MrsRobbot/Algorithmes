@@ -1,5 +1,5 @@
 
-<h1>**SOMMAIRE**</h1>
+<h1>SOMMAIRE</h1>
 
 1. [Introduction aux algorithmes](Introduction.md):
    - Qu'est-ce qu'un algorithme ?
