@@ -1,6 +1,7 @@
-un sommaire pour vous aider à apprendre les algorithmes et à retenir les concepts essentiels :
 
-1. Introduction aux algorithmes :
+**SOMMAIRE**
+
+1. [Introduction aux algorithmes](Introduction.md):
    - Qu'est-ce qu'un algorithme ?
    - Rôle des algorithmes en informatique.
    - Complexité algorithmique : temps et espace.
@@ -65,4 +66,5 @@ un sommaire pour vous aider à apprendre les algorithmes et à retenir les conce
     - Algorithme de recherche de chemin optimal dans un graphe acyclique (DAG).
     - Algorithme de rétropropagation (backpropagation) pour l'apprentissage automatique.
 
-Ce sommaire vous donne une idée générale des sujets clés en matière d'algorithmes. Vous pouvez étudier chaque concept individuellement, en vous aidant de livres, de tutoriels en ligne et de problèmes pratiques pour renforcer votre compréhension. Bonne chance dans votre apprentissage des algorithmes !
+Ce repos vous donne une idée générale des sujets clés en matière d'algorithmes. Vous pouvez étudier chaque concept individuellement, en vous aidant de livres, de tutoriels en ligne et de problèmes pratiques pour renforcer votre compréhension.
+Bonne chance dans votre apprentissage des algorithmes !
