@@ -20,9 +20,9 @@ Les tableaux, également connus sous le nom d'arrays, sont des structures de don
 <img src="Recherche-Pseudo-code.png" alt="Recherche-Pseudo-code">
 <img src="Recherche-Javascript.png" alt="Recherche-Javascript">
 
-3. Insertion :
-   - Ajout en fin de tableau : Vous pouvez ajouter un nouvel élément à la fin du tableau en utilisant l'indice suivant la dernière position occupée. Par exemple, `tableau[longueur] = nouvelElement` ajoute `nouvelElement` à la fin du tableau.
-   - Insertion à une position donnée : Si vous souhaitez insérer un élément à une position spécifique, vous devrez décaler les éléments existants vers la droite pour faire de la place, puis assigner la nouvelle valeur à l'indice souhaité.
+3. Insertion : L'insertion dans un tableau se réfère à l'ajout d'un nouvel élément à une position spécifique du tableau. Cela peut être effectué en décalant les éléments existants vers la droite (pour faire de la place) et en insérant le nouvel élément à l'indice souhaité. L'insertion peut également se faire à la fin du tableau en ajoutant simplement l'élément à la dernière position.
+<img src="Insertion-Pseudo-code.png" alt="Insertion-Pseudo-code">
+<img src="Insertion-Javascript.png" alt="Insertion-Javascript">
 
 4. Suppression :
    - Suppression par indice : Pour supprimer un élément à un indice donné, vous devrez décaler les éléments suivants vers la gauche pour combler l'espace vacant.
