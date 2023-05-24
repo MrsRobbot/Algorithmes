@@ -24,11 +24,14 @@ Les tableaux, également connus sous le nom d'arrays, sont des structures de don
 <img src="Insertion-Pseudo-code.png" alt="Insertion-Pseudo-code">
 <img src="Insertion-Javascript.png" alt="Insertion-Javascript">
 
-4. Suppression :
-   - Suppression par indice : Pour supprimer un élément à un indice donné, vous devrez décaler les éléments suivants vers la gauche pour combler l'espace vacant.
-   - Suppression par valeur : Si vous souhaitez supprimer une occurrence spécifique d'une valeur dans le tableau, vous devrez rechercher l'indice de cette valeur, puis supprimer l'élément à cet indice en décalant les éléments suivants vers la gauche.
+4. Suppression : La suppression d'éléments dans un tableau consiste à enlever un élément spécifique du tableau. Cela peut être réalisé en décalant les éléments suivants vers la gauche (pour remplir l'espace vide) après la suppression de l'élément ciblé. La suppression peut être basée sur l'indice de l'élément ou sa valeur, selon le cas.
 
-Il est important de noter que les opérations d'insertion et de suppression peuvent entraîner des décalages importants dans le tableau, ce qui peut être coûteux en termes de performances pour les tableaux de grande taille.
+
+
+<img src="Suppression-Pseudo-code.png" alt="Suppression-Pseudo-code">
+<img src="Suppression-Javascript.png" alt="Suppression-Javascript">
+
+Ces opérations de manipulation, recherche, insertion et suppression sont fondamentales pour travailler avec des tableaux et permettent de gérer et de traiter les données stockées de manière efficace.
 
 **-Listes chaînées : concepts de base, opérations, avantages et inconvénients.**
 
