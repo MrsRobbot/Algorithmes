@@ -17,7 +17,7 @@
    - Recherche binaire.
    - Recherche de motifs (substring).
 
-4. Algorithmes de tri :
+[4. Algorithmes de tri :](Algorithmes-de-tri.md)
    - Tri par sélection.
    - Tri par insertion.
    - Tri à bulles.
