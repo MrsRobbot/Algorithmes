@@ -107,6 +107,7 @@ RechercheMotif(texte, motif)
     retourner -1
 
 ```
+JavaScript :
 ```
 function rechercheMotif(texte, motif) {
     const n = texte.length;
