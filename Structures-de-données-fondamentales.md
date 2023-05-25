@@ -149,10 +149,79 @@ console.log(pile.size()); // Sortie : 2
 console.log(pile.isEmpty()); // Sortie : false
 ```
 
-Dans cet exemple, la
+Dans cet exemple, la classe `Pile` est implémentée à l'aide d'un tableau (`this.elements`). Les opérations de pile (push, pop, peek, isEmpty, size) sont définies comme des méthodes de la classe. Vous pouvez créer une instance de la pile, ajouter des éléments avec `push`, retirer des éléments avec `pop`, consulter l'élément au sommet avec `peek`, vérifier si la pile est vide avec `isEmpty` et obtenir la taille de la pile avec `size`.
 
- classe `Pile` est implémentée à l'aide d'un tableau (`this.elements`). Les opérations de pile (push, pop, peek, isEmpty, size) sont définies comme des méthodes de la classe. Vous pouvez créer une instance de la pile, ajouter des éléments avec `push`, retirer des éléments avec `pop`, consulter l'élément au sommet avec `peek`, vérifier si la pile est vide avec `isEmpty` et obtenir la taille de la pile avec `size`.
 
-N'hésitez pas à explorer d'autres applications et à expérimenter avec l'implémentation des piles en JavaScript selon vos besoins spécifiques.
 
 **-Files d'attente (queues) : principes, opérations (enqueue, dequeue), applications.**
+
+Les files d'attente (queues) sont des structures de données linéaires qui suivent le principe du "premier entré, premier sorti" (First-In-First-Out, FIFO). Contrairement aux piles, où le dernier élément ajouté est le premier à être retiré, les files d'attente traitent les éléments dans l'ordre chronologique de leur arrivée. Voici les principes de base, les opérations courantes et les applications des files d'attente :
+
+Principes de base des files d'attente :
+- Les files d'attente sont des structures de données abstraites qui peuvent être implémentées à l'aide de tableaux ou de listes chaînées.
+- Les éléments sont ajoutés à la fin de la file d'attente (enqueue) et retirés du début de la file d'attente (dequeue).
+- L'ordre dans lequel les éléments sont ajoutés est préservé lors de leur traitement.
+
+Opérations courantes sur les files d'attente :
+- Enqueue (ajouter en file) : Ajoute un nouvel élément à la fin de la file d'attente.
+- Dequeue (retirer de la file) : Retire l'élément du début de la file d'attente et le renvoie.
+- Front (premier élément) : Renvoie l'élément situé au début de la file d'attente sans le retirer.
+- IsEmpty (est vide) : Vérifie si la file d'attente est vide.
+- Size (taille) : Renvoie le nombre d'éléments présents dans la file d'attente.
+
+Applications des files d'attente :
+- Gestion des tâches : Les files d'attente sont couramment utilisées pour gérer les tâches en attente de traitement, comme les files d'impression, les demandes de service, etc.
+- Ordonnancement des processus : Dans les systèmes d'exploitation, les files d'attente sont utilisées pour ordonnancer les processus et déterminer leur ordre d'exécution.
+- Algorithme de parcours en largeur (BFS) : Les files d'attente sont utilisées pour mettre en œuvre le parcours en largeur des graphes, une technique utilisée dans les algorithmes de recherche et de résolution de problèmes.
+- Simulation de file d'attente réelle : Les files d'attente peuvent être utilisées pour simuler des scénarios de file d'attente réelle, tels que les files d'attente de clients dans les supermarchés, les files d'attente de voitures dans les péages, etc.
+
+Voici un exemple d'implémentation en JavaScript des opérations de file d'attente (enqueue, dequeue) à l'aide d'un tableau :
+
+```javascript
+class FileAttente {
+  constructor() {
+    this.elements = [];
+  }
+
+  enqueue(element) {
+    this.elements.push(element);
+  }
+
+  dequeue() {
+    if (this.isEmpty()) {
+      return null;
+    }
+    return this.elements.shift();
+  }
+
+  front() {
+    if (this.isEmpty()) {
+      return null;
+    }
+    return this.elements[0];
+  }
+
+  isEmpty() {
+    return this.elements.length === 0;
+  }
+
+  size() {
+    return this.elements.length;
+  }
+}
+
+// Exemple d'utilisation de la file d'attente
+const file = new
+
+ FileAttente();
+file.enqueue('A');
+file.enqueue('B');
+file.enqueue('C');
+
+console.log(file.dequeue()); // Sortie : 'A'
+console.log(file.front()); // Sortie : 'B'
+console.log(file.size()); // Sortie : 2
+console.log(file.isEmpty()); // Sortie : false
+```
+
+Dans cet exemple, la classe `FileAttente` est implémentée à l'aide d'un tableau (`this.elements`). Les opérations de file d'attente (enqueue, dequeue, front, isEmpty, size) sont définies comme des méthodes de la classe. Vous pouvez créer une instance de la file d'attente, ajouter des éléments avec `enqueue`, retirer des éléments avec `dequeue`, consulter le premier élément avec `front`, vérifier si la file d'attente est vide avec `isEmpty` et obtenir la taille de la file d'attente avec `size`.
