@@ -24,7 +24,7 @@
    - Tri fusion.
    - Tri rapide.
 
-5. Algorithmes de graphes :
+[5. Algorithmes de graphes :](Algorithmes-de-graphes.md)
    - Représentation des graphes.
    - Parcours en profondeur (DFS).
    - Parcours en largeur (BFS).
