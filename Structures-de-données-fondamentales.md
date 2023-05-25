@@ -82,4 +82,77 @@ Les listes chaînées sont couramment utilisées lorsque la taille des données 
 
 **-Piles (stacks) : principes, opérations (push, pop), applications.**
 
+Les piles (stacks) sont des structures de données linéaires qui suivent le principe du "dernier entré, premier sorti" (Last-In-First-Out, LIFO). Elles sont souvent comparées à une pile d'objets réels, où le dernier objet placé sur la pile est le premier à être retiré. Voici les principes de base, les opérations courantes et les applications des piles :
+
+Principes de base des piles :
+- Les piles sont des structures de données abstraites qui peuvent être implémentées à l'aide de tableaux ou de listes chaînées.
+- Les éléments sont ajoutés (poussés) et retirés (dépilés) uniquement à partir de l'extrémité supérieure de la pile, également appelée "sommet" (top) de la pile.
+- Les éléments situés en dessous du sommet de la pile sont inaccessibles tant que le sommet n'est pas retiré.
+
+Opérations courantes sur les piles :
+- Push (empiler) : Ajoute un nouvel élément au sommet de la pile.
+- Pop (dépiler) : Retire l'élément du sommet de la pile et le renvoie.
+- Peek (regarder) : Consulte l'élément situé au sommet de la pile sans le retirer.
+- IsEmpty (est vide) : Vérifie si la pile est vide.
+- Size (taille) : Renvoie le nombre d'éléments présents dans la pile.
+
+Applications des piles :
+- Gestion des appels de fonctions : Les piles sont utilisées pour suivre l'ordre d'exécution des fonctions dans de nombreux langages de programmation.
+- Undo/Redo : Les piles peuvent être utilisées pour mettre en œuvre les fonctionnalités d'annulation et de répétition d'actions dans les éditeurs de texte, les logiciels graphiques, etc.
+- Évaluation d'expressions : Les piles peuvent être utilisées pour évaluer des expressions arithmétiques, notamment pour la conversion entre les formes infixées, postfixées et préfixées.
+- Navigation dans les arbres : Les piles sont utilisées pour effectuer des parcours d'arbres en profondeur (depth-first traversal), tels que les parcours en profondeur d'abord (Depth-First Search, DFS).
+
+Voici un exemple d'implémentation en JavaScript des opérations de pile (push, pop) à l'aide d'un tableau :
+
+```javascript
+class Pile {
+  constructor() {
+    this.elements = [];
+  }
+
+  push(element) {
+    this.elements.push(element);
+  }
+
+  pop() {
+    if (this.isEmpty()) {
+      return null;
+    }
+    return this.elements.pop();
+  }
+
+  peek() {
+    if (this.isEmpty()) {
+      return null;
+    }
+    return this.elements[this.elements.length - 1];
+  }
+
+  isEmpty() {
+    return this.elements.length === 0;
+  }
+
+  size() {
+    return this.elements.length;
+  }
+}
+
+// Exemple d'utilisation de la pile
+const pile = new Pile();
+pile.push(1);
+pile.push(2);
+pile.push(3);
+
+console.log(pile.pop()); // Sortie : 3
+console.log(pile.peek()); // Sortie : 2
+console.log(pile.size()); // Sortie : 2
+console.log(pile.isEmpty()); // Sortie : false
+```
+
+Dans cet exemple, la
+
+ classe `Pile` est implémentée à l'aide d'un tableau (`this.elements`). Les opérations de pile (push, pop, peek, isEmpty, size) sont définies comme des méthodes de la classe. Vous pouvez créer une instance de la pile, ajouter des éléments avec `push`, retirer des éléments avec `pop`, consulter l'élément au sommet avec `peek`, vérifier si la pile est vide avec `isEmpty` et obtenir la taille de la pile avec `size`.
+
+N'hésitez pas à explorer d'autres applications et à expérimenter avec l'implémentation des piles en JavaScript selon vos besoins spécifiques.
+
 **-Files d'attente (queues) : principes, opérations (enqueue, dequeue), applications.**
