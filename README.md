@@ -1,37 +1,37 @@
 
 <h1>SOMMAIRE</h1>
 
-[1. Introduction aux algorithmes :](Introduction.md)
+[1. Introduction aux algorithmes :](1.Introduction.md)
    - Qu'est-ce qu'un algorithme ?
    - Rôle des algorithmes en informatique.
    - Complexité algorithmique : temps et espace.
 
-[2. Structures de données fondamentales :](Structures-de-données-fondamentales.md)
+[2. Structures de données fondamentales :](2.Structures-de-données-fondamentales.md)
    - Tableaux (arrays) : manipulation, recherche, insertion, suppression.
    - Listes chaînées : concepts de base, opérations, avantages et inconvénients.
    - Piles (stacks) : principes, opérations (push, pop), applications.
    - Files d'attente (queues) : principes, opérations (enqueue, dequeue), applications.
 
-[3. Algorithmes de recherche :](Algorithmes-de-recherche.md)
+[3. Algorithmes de recherche :](3.Algorithmes-de-recherche.md)
    - Recherche séquentielle.
    - Recherche binaire.
    - Recherche de motifs (substring).
 
-[4. Algorithmes de tri :](Algorithmes-de-tri.md)
+[4. Algorithmes de tri :](4.Algorithmes-de-tri.md)
    - Tri par sélection.
    - Tri par insertion.
    - Tri à bulles.
    - Tri fusion.
    - Tri rapide.
 
-[5. Algorithmes de graphes :](Algorithmes-de-graphes.md)
+[5. Algorithmes de graphes :](5.Algorithmes-de-graphes.md)
    - Représentation des graphes.
    - Parcours en profondeur (DFS).
    - Parcours en largeur (BFS).
    - Plus courts chemins (Dijkstra, Bellman-Ford).
    - Arbres couvrants de poids minimum (Kruskal, Prim).
 
-[6. Algorithmes de recherche et d'optimisation :]( Algorithmes-de-recherche-et-doptimisation.md)
+[6. Algorithmes de recherche et d'optimisation :](6.Algorithmes-de-recherche-et-doptimisation.md)
    - Recherche linéaire.
    - Recherche binaire.
    - Recherche tabou.
