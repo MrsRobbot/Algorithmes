@@ -5,223 +5,306 @@ Une structure de données est une manière organisée de stocker, gérer et mani
 Une structure de données peut être vue comme un conteneur qui offre différentes opérations pour ajouter, supprimer, rechercher et manipuler les données qu'elle contient. Elle définit également les règles de gestion des données, telles que l'ordre dans lequel elles sont stockées, leur relation et leur accessibilité.
 
 Les structures de données peuvent varier en fonction de la complexité et de l'organisation des données. Elles peuvent être linéaires, comme les tableaux et les listes, ou non linéaires, comme les arbres et les graphes. Chaque structure de données a ses propres caractéristiques, avantages et inconvénients, adaptés à des types de problèmes spécifiques.
+Voici les définitions, le pseudo-code et les exemples en JavaScript pour chaque structure de données fondamentale :
 
-**-Tableaux (arrays) : manipulation, recherche, insertion, suppression.**
+1. Tableaux (arrays) :
+   - Définition : Un tableau est une structure de données linéaire qui permet de stocker et d'accéder à plusieurs éléments de manière séquentielle en utilisant des indices.
+   - Manipulation : Les opérations courantes sur les tableaux incluent l'accès à un élément par son indice, l'insertion d'un nouvel élément, la suppression d'un élément existant et la recherche d'un élément dans le tableau.
+   - Exemple de pseudo-code :
 
-Les tableaux, également connus sous le nom d'arrays, sont des structures de données linéaires qui permettent de stocker une collection d'éléments de même type. Voici comment effectuer différentes opérations sur les tableaux :
+     ```plaintext
+     tableau <- [valeur1, valeur2, valeur3]  // Initialisation d'un tableau
 
-1. Manipulation : La manipulation d'un tableau fait référence aux opérations permettant d'accéder aux éléments du tableau, de les modifier ou de les traiter d'une manière spécifique. Cela inclut l'accès à un élément par son index, la modification de la valeur d'un élément existant, l'ajout d'éléments supplémentaires ou la suppression d'éléments.
+     // Accès à un élément
+     élément <- tableau[indice]
 
-   <img src="Manipulation-Pseudo-code.png" alt="Manipulation-Pseudo-code">
-   <img src="Manipulation - Javascript.png" alt="Manipulation-Javascript">
+     // Insertion d'un élément
+     tableau[indice] <- valeur
 
+     // Suppression d'un élément
+     supprimer élément à l'indice
 
-2. Recherche : La recherche dans un tableau consiste à trouver un élément spécifique à l'aide d'une valeur donnée. Cela peut être réalisé en parcourant le tableau et en comparant chaque élément avec la valeur recherchée. Si une correspondance est trouvée, l'indice de l'élément peut être retourné ou une indication peut être donnée sur sa présence dans le tableau.
-<img src="Recherche-Pseudo-code.png" alt="Recherche-Pseudo-code">
-<img src="Recherche-Javascript.png" alt="Recherche-Javascript">
+     // Recherche d'un élément
+     indice <- trouver indice de l'élément
+     ```
 
-3. Insertion : L'insertion dans un tableau se réfère à l'ajout d'un nouvel élément à une position spécifique du tableau. Cela peut être effectué en décalant les éléments existants vers la droite (pour faire de la place) et en insérant le nouvel élément à l'indice souhaité. L'insertion peut également se faire à la fin du tableau en ajoutant simplement l'élément à la dernière position.
-<img src="Insertion-Pseudo-code.png" alt="Insertion-Pseudo-code">
-<img src="Insertion-Javascript.png" alt="Insertion-Javascript">
+   - Exemple en JavaScript :
 
-4. Suppression : La suppression d'éléments dans un tableau consiste à enlever un élément spécifique du tableau. Cela peut être réalisé en décalant les éléments suivants vers la gauche (pour remplir l'espace vide) après la suppression de l'élément ciblé. La suppression peut être basée sur l'indice de l'élément ou sa valeur, selon le cas.
+     ```javascript
+     let tableau = [1, 2, 3];  // Initialisation d'un tableau
 
+     // Accès à un élément
+     let element = tableau[indice];
 
+     // Insertion d'un élément
+     tableau[indice] = valeur;
 
-<img src="Suppression-Pseudo-code.png" alt="Suppression-Pseudo-code">
-<img src="Suppression-Javascript.png" alt="Suppression-Javascript">
+     // Suppression d'un élément
+     tableau.splice(indice, 1);
 
-Ces opérations de manipulation, recherche, insertion et suppression sont fondamentales pour travailler avec des tableaux et permettent de gérer et de traiter les données stockées de manière efficace.
+     // Recherche d'un élément
+     let indice = tableau.indexOf(element);
+     ```
 
-**-Listes chaînées : concepts de base, opérations, avantages et inconvénients.**
+2. Listes chaînées :
+   - Définition : Une liste chaînée est une structure de données linéaire composée de nœuds, où chaque nœud contient une valeur et une référence (ou un lien) vers le nœud suivant.
+   - Concepts de base : Les nœuds sont liés les uns aux autres pour former une séquence. La liste chaînée peut être simple (chaque nœud a une seule référence) ou double (chaque nœud a une référence vers le nœud précédent et suivant).
+   - Opérations : Les opérations courantes sur les listes chaînées incluent l'insertion d'un nouvel élément, la suppression d'un élément existant, la recherche d'un élément et le parcours de la liste.
+   - Avantages : Les listes chaînées permettent une insertion et une suppression efficaces, même au milieu de la liste, contrairement aux tableaux. Elles peuvent être utilisées pour implémenter d'autres structures de données complexes.
+   - Inconvénients : L'accès direct à un élément nécessite de parcourir la liste à partir du début, ce qui peut être moins efficace que l'accès indexé dans un tableau.
+   - Exemple de pseudo-code :
 
-Les listes chaînées sont des structures de données linéaires qui permettent de stocker et d'organiser des éléments de manière dynamique. Voici les concepts de base, les opérations, ainsi que les avantages et les inconvénients des listes chaînées :
+     ```plaintext
+     ListeChainee
+       Noeud
+         valeur
+         referenceVersSuivant
 
-Concepts de base :
-- Une liste chaînée est composée de nœuds, où chaque nœud contient une valeur et un pointeur (référence) vers le nœud suivant dans la liste.
-
-- Le premier nœud de la liste est appelé "tête" (head), et le dernier nœud est généralement un nœud spécial appelé "sentinelle" ou "sentinelle de fin" (tail).
-- Les nœuds d'une liste chaînée sont généralement créés dynamiquement, ce qui permet une allocation flexible de la mémoire en fonction des besoins.
-
-Opérations courantes :
-- Insertion : Permet d'ajouter un nouvel élément à la liste chaînée, que ce soit en tête, en fin ou à une position spécifique.
-
-<img src="Insertion-dans-une-liste-chaînée-Pseudo-code.png" alt="Insertion-dans-une-liste-chaînée-Pseudo-code">
-<img src="Insertion-dans-une-liste-chaînée-Javascript.png" alt="Insertion-dans-une-liste-chaînée-Javascript">
-
-- Suppression : Permet de retirer un élément de la liste chaînée en mettant à jour les pointeurs appropriés.
-
-<img src="Suppression-liste-chaînée-Pseudo-code.png" alt="Suppression-liste-chaînée-Pseudo-code">
-<img src="Suppression-liste-chaînée-Javascript.png" alt="Suppression-liste-chaînée-Javascript">
-
-- Recherche : Permet de trouver un élément spécifique dans la liste chaînée en parcourant les nœuds de manière séquentielle.
-
-<img src="Recherche-liste-chaînée-Pseudo-code.png" alt="Recherche-liste-chaînée-Pseudo-code">
-<img src="Recherche-liste-chaînée-Javascript.png" alt="Recherche-liste-chaînée-Javascript">
-
-- Parcours : Permet de parcourir tous les éléments de la liste chaînée pour les afficher ou les traiter.
-
-<img src="Parcours-liste-chaînée-Pseudo-code.png" alt="Parcours-liste-chaînée-Pseudo-code">
-<img src="Parcours-liste-chaînée-Javascript.png" alt="Parcours-liste-chaînée-Javascript">
-
-- Accès : Bien que les listes chaînées ne supportent pas un accès direct par indice comme les tableaux, il est possible d'accéder à un élément en suivant les pointeurs à partir de la tête de liste.
-
-<img src="Accès-liste-chaînée-Pseudo-code.png" alt="Accès-liste-chaînée-Pseudo-code">
-<img src="Accès-liste-chaînée-Javascript.png" alt="Accès-liste-chaînée-Javascript">
-
-Avantages des listes chaînées :
-- Allocation dynamique : Les nœuds des listes chaînées peuvent être alloués et libérés dynamiquement, permettant une gestion flexible de la mémoire.
-- Insertion et suppression efficaces : Comparées aux tableaux, les listes chaînées peuvent insérer et supprimer des éléments plus efficacement, car elles n'impliquent pas le décalage d'autres éléments.
-- Taille variable : Les listes chaînées peuvent être facilement étendues ou réduites en fonction des besoins, sans nécessiter une allocation continue de mémoire.
-
-Inconvénients des listes chaînées :
-- Accès séquentiel : Contrairement aux tableaux, l'accès aux éléments d'une liste chaînée nécessite un parcours séquentiel à partir de la tête, ce qui peut être moins efficace pour des opérations de recherche aléatoire.
-- Utilisation de mémoire supplémentaire : Les listes chaînées nécessitent de la mémoire supplémentaire pour stocker les pointeurs de chaque nœud, ce qui peut augmenter l'utilisation de mémoire par rapport aux tableaux.
-
-Les listes chaînées sont couramment utilisées lorsque la taille des données est inconnue à l'avance ou lorsqu'il est nécessaire d'effectuer des opérations d'insertion et de suppression fréquentes. Elles offrent une structure de données flexible et efficiente pour de nombreux problèmes informatiques.
-
-**-Piles (stacks) : principes, opérations (push, pop), applications.**
-
-Les piles (stacks) sont des structures de données linéaires qui suivent le principe du "dernier entré, premier sorti" (Last-In-First-Out, LIFO). Elles sont souvent comparées à une pile d'objets réels, où le dernier objet placé sur la pile est le premier à être retiré. Voici les principes de base, les opérations courantes et les applications des piles :
-
-Principes de base des piles :
-- Les piles sont des structures de données abstraites qui peuvent être implémentées à l'aide de tableaux ou de listes chaînées.
-- Les éléments sont ajoutés (poussés) et retirés (dépilés) uniquement à partir de l'extrémité supérieure de la pile, également appelée "sommet" (top) de la pile.
-- Les éléments situés en dessous du sommet de la pile sont inaccessibles tant que le sommet n'est pas retiré.
-
-Opérations courantes sur les piles :
-- Push (empiler) : Ajoute un nouvel élément au sommet de la pile.
-- Pop (dépiler) : Retire l'élément du sommet de la pile et le renvoie.
-- Peek (regarder) : Consulte l'élément situé au sommet de la pile sans le retirer.
-- IsEmpty (est vide) : Vérifie si la pile est vide.
-- Size (taille) : Renvoie le nombre d'éléments présents dans la pile.
-
-Applications des piles :
-- Gestion des appels de fonctions : Les piles sont utilisées pour suivre l'ordre d'exécution des fonctions dans de nombreux langages de programmation.
-- Undo/Redo : Les piles peuvent être utilisées pour mettre en œuvre les fonctionnalités d'annulation et de répétition d'actions dans les éditeurs de texte, les logiciels graphiques, etc.
-- Évaluation d'expressions : Les piles peuvent être utilisées pour évaluer des expressions arithmétiques, notamment pour la conversion entre les formes infixées, postfixées et préfixées.
-- Navigation dans les arbres : Les piles sont utilisées pour effectuer des parcours d'arbres en profondeur (depth-first traversal), tels que les parcours en profondeur d'abord (Depth-First Search, DFS).
-
-Voici un exemple d'implémentation en JavaScript des opérations de pile (push, pop) à l'aide d'un tableau :
-
-```javascript
-class Pile {
-  constructor() {
-    this.elements = [];
-  }
-
-  push(element) {
-    this.elements.push(element);
-  }
-
-  pop() {
-    if (this.isEmpty()) {
-      return null;
-    }
-    return this.elements.pop();
-  }
-
-  peek() {
-    if (this.isEmpty()) {
-      return null;
-    }
-    return this.elements[this.elements.length - 1];
-  }
-
-  isEmpty() {
-    return this.elements.length === 0;
-  }
-
-  size() {
-    return this.elements.length;
-  }
-}
-
-// Exemple d'utilisation de la pile
-const pile = new Pile();
-pile.push(1);
-pile.push(2);
-pile.push(3);
-
-console.log(pile.pop()); // Sortie : 3
-console.log(pile.peek()); // Sortie : 2
-console.log(pile.size()); // Sortie : 2
-console.log(pile.isEmpty()); // Sortie : false
-```
-
-Dans cet exemple, la classe `Pile` est implémentée à l'aide d'un tableau (`this.elements`). Les opérations de pile (push, pop, peek, isEmpty, size) sont définies comme des méthodes de la classe. Vous pouvez créer une instance de la pile, ajouter des éléments avec `push`, retirer des éléments avec `pop`, consulter l'élément au sommet avec `peek`, vérifier si la pile est vide avec `isEmpty` et obtenir la taille de la pile avec `size`.
+     // Insertion d'un nouvel élément
+     inserer(valeur, position)
+       nouveauNoeud <- Noeud(valeur)
+       si position == debut
+         nouveauNoeud.referenceVersSuivant <- debut
+         debut <- nouveauNoeud
+       sinon si position == fin
+         dernierNoeud.referenceVersSuivant <- nouveauNoeud
+         dernierNoeud <- nouveauNoeud
+       sinon
+         noeudPrecedent <- trouverNoeud(position - 1)
 
 
+         nouveauNoeud.referenceVersSuivant <- noeudPrecedent.referenceVersSuivant
+         noeudPrecedent.referenceVersSuivant <- nouveauNoeud
+       fin si
 
-**-Files d'attente (queues) : principes, opérations (enqueue, dequeue), applications.**
+     // Suppression d'un élément
+     supprimer(position)
+       si position == debut
+         debut <- debut.referenceVersSuivant
+       sinon si position == fin
+         noeudPrecedent <- trouverNoeud(position - 1)
+         noeudPrecedent.referenceVersSuivant <- null
+         dernierNoeud <- noeudPrecedent
+       sinon
+         noeudPrecedent <- trouverNoeud(position - 1)
+         noeudASupprimer <- noeudPrecedent.referenceVersSuivant
+         noeudPrecedent.referenceVersSuivant <- noeudASupprimer.referenceVersSuivant
+         noeudASupprimer.referenceVersSuivant <- null
+       fin si
 
-Les files d'attente (queues) sont des structures de données linéaires qui suivent le principe du "premier entré, premier sorti" (First-In-First-Out, FIFO). Contrairement aux piles, où le dernier élément ajouté est le premier à être retiré, les files d'attente traitent les éléments dans l'ordre chronologique de leur arrivée. Voici les principes de base, les opérations courantes et les applications des files d'attente :
+     // Recherche d'un élément
+     trouver(valeur)
+       noeudActuel <- debut
+       tant que noeudActuel != null
+         si noeudActuel.valeur == valeur alors
+           retourner vrai
+         fin si
+         noeudActuel <- noeudActuel.referenceVersSuivant
+       fin tant que
+       retourner faux
+     ```
 
-Principes de base des files d'attente :
-- Les files d'attente sont des structures de données abstraites qui peuvent être implémentées à l'aide de tableaux ou de listes chaînées.
-- Les éléments sont ajoutés à la fin de la file d'attente (enqueue) et retirés du début de la file d'attente (dequeue).
-- L'ordre dans lequel les éléments sont ajoutés est préservé lors de leur traitement.
+   - Exemple en JavaScript :
 
-Opérations courantes sur les files d'attente :
-- Enqueue (ajouter en file) : Ajoute un nouvel élément à la fin de la file d'attente.
-- Dequeue (retirer de la file) : Retire l'élément du début de la file d'attente et le renvoie.
-- Front (premier élément) : Renvoie l'élément situé au début de la file d'attente sans le retirer.
-- IsEmpty (est vide) : Vérifie si la file d'attente est vide.
-- Size (taille) : Renvoie le nombre d'éléments présents dans la file d'attente.
+     ```javascript
+     class Noeud {
+       constructor(valeur) {
+         this.valeur = valeur;
+         this.referenceVersSuivant = null;
+       }
+     }
 
-Applications des files d'attente :
-- Gestion des tâches : Les files d'attente sont couramment utilisées pour gérer les tâches en attente de traitement, comme les files d'impression, les demandes de service, etc.
-- Ordonnancement des processus : Dans les systèmes d'exploitation, les files d'attente sont utilisées pour ordonnancer les processus et déterminer leur ordre d'exécution.
-- Algorithme de parcours en largeur (BFS) : Les files d'attente sont utilisées pour mettre en œuvre le parcours en largeur des graphes, une technique utilisée dans les algorithmes de recherche et de résolution de problèmes.
-- Simulation de file d'attente réelle : Les files d'attente peuvent être utilisées pour simuler des scénarios de file d'attente réelle, tels que les files d'attente de clients dans les supermarchés, les files d'attente de voitures dans les péages, etc.
+     class ListeChainee {
+       constructor() {
+         this.debut = null;
+         this.dernier = null;
+       }
 
-Voici un exemple d'implémentation en JavaScript des opérations de file d'attente (enqueue, dequeue) à l'aide d'un tableau :
+       // Insertion d'un nouvel élément
+       inserer(valeur, position) {
+         const nouveauNoeud = new Noeud(valeur);
+         if (position === 0) {
+           nouveauNoeud.referenceVersSuivant = this.debut;
+           this.debut = nouveauNoeud;
+           if (this.dernier === null) {
+             this.dernier = nouveauNoeud;
+           }
+         } else if (position === this.longueur()) {
+           this.dernier.referenceVersSuivant = nouveauNoeud;
+           this.dernier = nouveauNoeud;
+         } else {
+           const noeudPrecedent = this.trouverNoeud(position - 1);
+           nouveauNoeud.referenceVersSuivant = noeudPrecedent.referenceVersSuivant;
+           noeudPrecedent.referenceVersSuivant = nouveauNoeud;
+         }
+       }
 
-```javascript
-class FileAttente {
-  constructor() {
-    this.elements = [];
-  }
+       // Suppression d'un élément
+       supprimer(position) {
+         if (position === 0) {
+           this.debut = this.debut.referenceVersSuivant;
+           if (this.debut === null) {
+             this.dernier = null;
+           }
+         } else if (position === this.longueur() - 1) {
+           const noeudPrecedent = this.trouverNoeud(position - 1);
+           noeudPrecedent.referenceVersSuivant = null;
+           this.dernier = noeudPrecedent;
+         } else {
+           const noeudPrecedent = this.trouverNoeud(position - 1);
+           const noeudASupprimer = noeudPrecedent.referenceVersSuivant;
+           noeudPrecedent.referenceVersSuivant = noeudASupprimer.referenceVersSuivant;
+           noeudASupprimer.referenceVersSuivant = null;
+         }
+       }
 
-  enqueue(element) {
-    this.elements.push(element);
-  }
+       // Recherche d'un élément
+       trouver(valeur) {
+         let noeudActuel = this.debut;
+         while (noeudActuel !== null) {
+          
 
-  dequeue() {
-    if (this.isEmpty()) {
-      return null;
-    }
-    return this.elements.shift();
-  }
+ if (noeudActuel.valeur === valeur) {
+             return true;
+           }
+           noeudActuel = noeudActuel.referenceVersSuivant;
+         }
+         return false;
+       }
 
-  front() {
-    if (this.isEmpty()) {
-      return null;
-    }
-    return this.elements[0];
-  }
+       // Longueur de la liste
+       longueur() {
+         let compteur = 0;
+         let noeudActuel = this.debut;
+         while (noeudActuel !== null) {
+           compteur++;
+           noeudActuel = noeudActuel.referenceVersSuivant;
+         }
+         return compteur;
+       }
 
-  isEmpty() {
-    return this.elements.length === 0;
-  }
+       // Autres méthodes (parcours, etc.)
+     }
+     ```
 
-  size() {
-    return this.elements.length;
-  }
-}
+3. Piles (stacks) :
+   - Principes : Une pile est une structure de données linéaire de type LIFO (Last-In-First-Out), ce qui signifie que le dernier élément ajouté est le premier élément à être retiré.
+   - Opérations : Les principales opérations sur les piles sont "push" pour ajouter un élément au sommet de la pile et "pop" pour retirer l'élément supérieur de la pile.
+   - Applications : Les piles sont couramment utilisées dans les langages de programmation pour gérer l'appel de fonctions (pile d'appels), les opérations de désallocation de mémoire (pile d'exécution), la vérification des parenthèses équilibrées, etc.
 
-// Exemple d'utilisation de la file d'attente
-const file = new
+   Exemple de pseudo-code :
 
- FileAttente();
-file.enqueue('A');
-file.enqueue('B');
-file.enqueue('C');
+     ```plaintext
+     Pile
+       elements
+       taille
 
-console.log(file.dequeue()); // Sortie : 'A'
-console.log(file.front()); // Sortie : 'B'
-console.log(file.size()); // Sortie : 2
-console.log(file.isEmpty()); // Sortie : false
-```
+     // Opération Push (Ajouter un élément)
+     push(element)
+       elements[taille] <- element
+       taille <- taille + 1
 
-Dans cet exemple, la classe `FileAttente` est implémentée à l'aide d'un tableau (`this.elements`). Les opérations de file d'attente (enqueue, dequeue, front, isEmpty, size) sont définies comme des méthodes de la classe. Vous pouvez créer une instance de la file d'attente, ajouter des éléments avec `enqueue`, retirer des éléments avec `dequeue`, consulter le premier élément avec `front`, vérifier si la file d'attente est vide avec `isEmpty` et obtenir la taille de la file d'attente avec `size`.
+     // Opération Pop (Retirer l'élément supérieur)
+     pop()
+       si taille > 0
+         taille <- taille - 1
+         retourner elements[taille]
+       fin si
+     ```
+
+   - Exemple en JavaScript :
+
+     ```javascript
+     class Pile {
+       constructor() {
+         this.elements = [];
+         this.taille = 0;
+       }
+
+       // Opération Push (Ajouter un élément)
+       push(element) {
+         this.elements[this.taille] = element;
+         this.taille++;
+       }
+
+       // Opération Pop (Retirer l'élément supérieur)
+       pop() {
+         if (this.taille > 0) {
+           this.taille--;
+           return this.elements[this.taille];
+         }
+       }
+     }
+
+     // Exemple d'utilisation
+     const pile = new Pile();
+     pile.push(1);
+     pile.push(2);
+     pile.push(3);
+     console.log(pile.pop());  // Affiche 3
+     ```
+
+4. Files d'attente (queues) :
+   - Principes : Une file d'attente est une structure de données linéaire de type FIFO (First-In-First-Out), ce qui signifie que le premier élément ajouté est le premier élément à être retiré.
+   - Opérations : Les principales opérations sur les files d'attente sont "enqueue" pour ajouter un élément à la fin de la file et "dequeue" pour retirer l'élément en tête de file.
+   - Applications : Les files d'attente sont couramment utilisées dans les systèmes de gestion des processus, la planification des tâches, la gestion des requêtes, etc.
+
+   Exemple de pseudo-code :
+
+     ```plaintext
+     FileAttente
+       elements
+       taille
+       debut
+
+     // Opération Enqueue (Ajouter un élément à la fin)
+     enqueue(element)
+
+
+       elements[debut + taille] <- element
+       taille <- taille + 1
+
+     // Opération Dequeue (Retirer l'élément en tête)
+     dequeue()
+       si taille > 0
+         debut <- debut + 1
+         taille <- taille - 1
+         retourner elements[debut - 1]
+       fin si
+     ```
+
+   - Exemple en JavaScript :
+
+     ```javascript
+     class FileAttente {
+       constructor() {
+         this.elements = [];
+         this.taille = 0;
+         this.debut = 0;
+       }
+
+       // Opération Enqueue (Ajouter un élément à la fin)
+       enqueue(element) {
+         this.elements[this.debut + this.taille] = element;
+         this.taille++;
+       }
+
+       // Opération Dequeue (Retirer l'élément en tête)
+       dequeue() {
+         if (this.taille > 0) {
+           this.debut++;
+           this.taille--;
+           return this.elements[this.debut - 1];
+         }
+       }
+     }
+
+     // Exemple d'utilisation
+     const file = new FileAttente();
+     file.enqueue(1);
+     file.enqueue(2);
+     file.enqueue(3);
+     console.log(file.dequeue());  // Affiche 1
+     ```
+
+Ces structures de données fondamentales sont largement utilisées en programmation et jouent un rôle crucial dans la résolution de problèmes complexes.
