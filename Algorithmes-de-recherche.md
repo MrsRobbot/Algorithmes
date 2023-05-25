@@ -92,27 +92,45 @@ Pseudo-code (Algorithme de Boyer-Moore) :
 ```
 RechercheMotif(texte, motif)
     n <- longueur(texte)
-   
+    m <- longueur(motif)
 
- m <- longueur(motif)
-    i <- m - 1
-    j <- m - 1
-
-    tant que i < n
-        si texte[i] == motif[j] alors
-            si j == 0 alors
-                retourner i
-            fin si
-            i <- i - 1
-            j <- j - 1
-        sinon
-            i <- i + m - min(j, 1 + dernierIndexDu(texte[i], motif))
-            j <- m - 1
+    pour i de 0 à n - m
+        j <- 0
+        tant que j < m et texte[i + j] == motif[j]
+            j <- j + 1
+        fin tant que
+        si j == m alors
+            retourner i
         fin si
-    fin tant que
+    fin pour
 
     retourner -1
+
+```
+```
+function rechercheMotif(texte, motif) {
+    const n = texte.length;
+    const m = motif.length;
+
+    for (let i = 0; i <= n - m; i++) {
+        let j = 0;
+        while (j < m && texte[i + j] === motif[j]) {
+            j++;
+        }
+        if (j === m) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+// Exemple d'utilisation
+const texte = "Bonjour, comment ça va ?";
+const motif = "comment";
+console.log(rechercheMotif(texte, motif)); // Sortie : 9
+console.log(rechercheMotif(texte, "salut")); // Sortie : -1
 ```
 
-Ce pseudo-code représente l'algorithme de Boyer-Moore, qui est un algorithme efficace pour la recherche de motifs. Sa mise en œuvre complète nécessiterait plus de code, mais cela vous donne une idée générale de son fonctionnement. En JavaScript, vous pouvez utiliser des bibliothèques ou des fonctions intégrées telles que `indexOf` pour effectuer la recherche de motifs dans une chaîne.
+Ces exemples représentent les algorithmes de recherche séquentielle, binaire et de motifs (substring) en pseudo-code et en JavaScript. Vous pouvez les utiliser comme point de départ et les adapter en fonction de vos besoins spécifiques.
 
