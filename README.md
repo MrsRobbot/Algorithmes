@@ -31,7 +31,7 @@
    - Plus courts chemins (Dijkstra, Bellman-Ford).
    - Arbres couvrants de poids minimum (Kruskal, Prim).
 
-6. Algorithmes de recherche et d'optimisation :
+[6. Algorithmes de recherche et d'optimisation :]( Algorithmes-de-recherche-et-doptimisation.md)
    - Recherche linéaire.
    - Recherche binaire.
    - Recherche tabou.
