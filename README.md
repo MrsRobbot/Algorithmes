@@ -12,7 +12,7 @@
    - Piles (stacks) : principes, opérations (push, pop), applications.
    - Files d'attente (queues) : principes, opérations (enqueue, dequeue), applications.
 
-3. Algorithmes de recherche :
+[3. Algorithmes de recherche :](Algorithmes-de-recherche.md)
    - Recherche séquentielle.
    - Recherche binaire.
    - Recherche de motifs (substring).
